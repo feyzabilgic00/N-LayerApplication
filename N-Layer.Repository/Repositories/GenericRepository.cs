@@ -28,7 +28,7 @@ namespace N_Layer.Repository.Repositories
             return await _dbSet.AnyAsync(expression);
         }
 
-        public IQueryable<T> GetAll(Expression<Func<T, bool>> expression)
+        public IQueryable<T> GetAll()
         {
             /* AsNoTracking() kullanmamızdaki amaç Ef Core çekmiş olduğu dataları memorye almaması 
              için kullanılır. Bu şekilde daha performaslı olmasını sağlıyoruz. */
